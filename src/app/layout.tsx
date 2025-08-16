@@ -49,8 +49,7 @@ export const metadata: Metadata = {
 
   // Další užitečné tagy
   themeColor: '#6633cc', // Barva pro UI prohlížeče na mobilních zařízeních
-  colorScheme: 'dark',
-  manifest: '/manifest.json', // Cesta k manifest souboru pro PWA
+  colorScheme: 'dark'
 };
 
 export default function RootLayout({
