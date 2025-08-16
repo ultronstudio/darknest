@@ -5,8 +5,6 @@ import React, { useEffect } from "react";
 import Hero from "@/components/Hero";
 import Minigames from "@/components/Minigames";
 import About from "@/components/About";
-import Team from "@/components/Team";
-import Voting from "@/components/Voting";
 import Join from "@/components/Join";
 
 export default function Home() {
@@ -33,8 +31,6 @@ export default function Home() {
       <Hero />
       <Minigames />
       <About />
-      <Team />
-      <Voting />
       <Join />
     </>
   );
