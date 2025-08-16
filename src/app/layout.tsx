@@ -6,9 +6,51 @@ import { AOSInitializer } from '@/components/AOSInitializer';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+// Rozšířená metadata pro SEO a sociální sítě
 export const metadata: Metadata = {
-  title: "DarkNest",
-  description: "Minecraft server DarkNest",
+  // Základní metadata
+  title: "DarkNest - Váš Minecraft Server", // Lepší titulek pro SEO
+  description: "Připojte se na DarkNest, unikátní Minecraft server s přátelskou komunitou a spoustou zábavy.",
+  
+  // Autor a vlastnictví
+  authors: [{ name: 'Petr Vurm', url: 'https://petrvurm.cz' }], // Nahraďte svými údaji
+
+  // Klíčová slova pro vyhledávače
+  keywords: ['Minecraft', 'DarkNest', 'Minecraft server', 'CZ/SK server', 'gaming', 'survival', 'multiplayer'],
+
+  // Direktivy pro roboty (indexování a sledování odkazů)
+  // Použijte "noindex, nofollow" pouze pokud si přejete, aby stránka NEBYLA indexována vyhledávači
+  robots: {
+    index: false, // Změňte na 'true' pro produkční web, který chcete mít ve vyhledávačích
+    follow: false, // Změňte na 'true' pro produkční web
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  
+  // Kontrola referreru
+  referrer: 'origin-when-cross-origin', // Běžná a bezpečná politika referreru
+
+  // Open Graph metadata (pro Facebook, Discord, atd.)
+  openGraph: {
+    title: 'DarkNest - Váš Minecraft Server',
+    description: 'Připojte se na DarkNest, unikátní Minecraft server s přátelskou komunitou.',
+    url: 'https://darknest.petrvurm.cz',
+    siteName: 'DarkNest',
+    locale: 'cs_CZ',
+    type: 'website',
+  },
+
+  // Další užitečné tagy
+  themeColor: '#6633cc', // Barva pro UI prohlížeče na mobilních zařízeních
+  colorScheme: 'dark',
+  manifest: '/manifest.json', // Cesta k manifest souboru pro PWA
 };
 
 export default function RootLayout({
@@ -22,6 +64,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        {/* Favicony a další ikony můžete přidat sem nebo do metadata objektu */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="antialiased">
         <div className="bg-gray-900 text-gray-300 relative overflow-hidden">
