@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`hover:text-[#6633cc] transition-colors duration-300 ${
+              className={`hover:text-[#6633cc] transition-colors duration-200 ${
                 isActive(link.href) ? 'font-bold text-[#6633cc]' : 'text-gray-300'
               }`}
             >

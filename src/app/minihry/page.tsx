@@ -62,7 +62,7 @@ export default function MinigamesPage() {
     <main className="bg-gray-900 mt-20">
       <section id="minihry" className="py-10">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 scroll-animate">
+          <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white">Naše <span className="text-[#6633cc]">minihry</span></h1>
             <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">Ponoř se do našich unikátních herních módů, které jsou plné zábavy a výzev. Každý si zde najde to své.</p>
           </div>
@@ -71,12 +71,11 @@ export default function MinigamesPage() {
             {minigamesData.map((game, index) => (
               <div
                 key={game.title}
-                className={`
-                  scroll-animate group flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 
+                className={`group flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 
                   bg-gray-800/50 rounded-xl border border-gray-700
                   
                   // ZDE JSOU PŘIDÁNY NOVÉ TŘÍDY PRO PŘECHODY A HOVER EFEKTY
-                  transition-all duration-300 ease-in-out 
+                  transition-all duration-200 ease-in-out 
                   hover:-translate-y-2 hover:border-[#6633cc] 
                   hover:shadow-2xl hover:shadow-[#6633cc]/20
                   
@@ -94,7 +93,7 @@ export default function MinigamesPage() {
                       rounded-lg object-cover w-full h-auto shadow-lg shadow-black/30
                       
                       // ZDE JSOU PŘIDÁNY TŘÍDY PRO HOVER EFEKT OBRÁZKU
-                      transition-transform duration-300 ease-in-out
+                      transition-transform duration-200 ease-in-out
                       group-hover:scale-105
                     "
                   />

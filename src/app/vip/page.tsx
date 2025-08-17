@@ -113,8 +113,8 @@ const VipCard: React.FC<{ rank: VipRank, delay: string }> = ({ rank, delay }) =>
       <div 
         className={`relative group bg-gray-800/50 p-8 rounded-xl border border-gray-700 
                    ${rank.recommended ? classes.glow : `hover:${classes.border}`} 
-                   transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl 
-                   ${classes.shadow} scroll-animate flex flex-col`} 
+                   transition-all duration-200 transform hover:-translate-y-2 hover:shadow-2xl 
+                   ${classes.shadow} flex flex-col`} 
         style={{ transitionDelay: delay }}
       >
         {rank.recommended && (
@@ -162,7 +162,7 @@ export default function VipPage() {
             <section id="vip" className="py-20">
                 <div className="container mx-auto px-6">
                     {/* Úvodní hlavička stránky */}
-                    <div className="text-center mb-16 scroll-animate">
+                    <div className="text-center mb-16">
                         <h1 className="text-4xl md:text-5xl font-bold text-white" dangerouslySetInnerHTML={{ __html: vipContent.title }}></h1>
                         <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">{vipContent.subtitle}</p>
                     </div>
@@ -175,12 +175,12 @@ export default function VipPage() {
                     </div>
 
                     {/* Tlačítko pro přechod do obchodu */}
-                    <div className="mt-16 text-center scroll-animate" style={{ transitionDelay: '300ms' }}>
+                    <div className="mt-16 text-center" style={{ transitionDelay: '300ms' }}>
                         <a
                             href={vipContent.store.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block bg-[#6633cc] text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-[#6633cc]/90 transition-colors duration-300"
+                            className="inline-block bg-[#6633cc] text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-[#6633cc]/90 transition-colors duration-200"
                         >
                             {vipContent.store.text}
                         </a>

@@ -47,7 +47,7 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }
     <div
       className="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 text-center
                  flex flex-col items-center
-                 transition-all duration-300 ease-in-out
+                 transition-all duration-200 ease-in-out
                  hover:border-[#6633cc] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#6633cc]/20"
       style={{ transitionDelay: `${index * 100}ms` }}
     >
@@ -59,7 +59,7 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }
           width={128}
           height={128}
           unoptimized={true}
-          className="object-contain transition-all duration-300 transform 
+          className="object-contain transition-all duration-200 transform 
                      group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(102,51,204,0.7)]"
         />
       </div>
@@ -199,7 +199,7 @@ export default function TeamPage() {
       <section id="a-tym" className="py-10">
         <div className="container mx-auto px-6">
           {/* Úvodní hlavička stránky */}
-          <div className="text-center mb-16 scroll-animate">
+          <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               Náš <span className="text-[#6633cc]">tým</span>
             </h1>
@@ -212,7 +212,7 @@ export default function TeamPage() {
           {/* Vykreslení jednotlivých sekcí */}
           <div className="flex flex-col gap-16">
             {teamSections.map((section) => (
-              <div key={section.title} className="scroll-animate">
+              <div key={section.title}>
                 {/* Hlavička sekce */}
                 <div className="mb-8 text-center md:text-left">
                   <h2 className="text-3xl font-bold text-white">{section.title}</h2>

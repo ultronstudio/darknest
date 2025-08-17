@@ -74,20 +74,20 @@ const Hero: React.FC = () => {
           </span>
         </h1>
         <p
-          className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto scroll-animate"
+          className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto"
           style={{ transitionDelay: "0.5s" }}
         >
           Tvoje nové dobrodružství ve světě kostek začíná právě zde.
         </p>
         <div
-          className="mt-10 scroll-animate"
+          className="mt-10"
           style={{ transitionDelay: "0.6s" }}
         >
           <a
             href="#pripojit-se"
             // 3. Přidáme onClick událost a voláme naši funkci
             onClick={(e) => handleScrollClick(e, "#pripojit-se")}
-            className="bg-[#6633cc] hover:bg-[#6633cc]/90 text-white font-bold text-lg py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-[#6633cc] hover:bg-[#6633cc]/90 text-white font-bold text-lg py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             Začít Hrát
           </a>
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
 
         {/* Server Status */}
         <div
-          className="mt-8 text-gray-400 scroll-animate"
+          className="mt-8 text-gray-400"
           style={{ transitionDelay: "0.8s", minHeight: "24px" }}
         >
           {serverStatus === "loading" && (

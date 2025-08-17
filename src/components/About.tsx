@@ -6,7 +6,7 @@ const About: React.FC = () => {
   return (
     <section id="o-nas" className="py-20 bg-gray-800/20">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-10 scroll-animate">
+        <div className="flex flex-col lg:flex-row items-center gap-10">
           <div className="lg:w-1/2 w-full">
             <img 
               src="https://placehold.co/800x600/1f2937/6633cc.png?text=Epická+Stavba" 

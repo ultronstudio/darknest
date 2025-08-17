@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 py-6 flex flex-row items-center justify-between text-gray-500 text-sm">
         <div className="text-left mb-4 md:mb-0">
           <p>&copy; {new Date().getFullYear()} DarkNest. Všechna práva vyhrazena.</p>
-          <p className="mt-1">Nejsme spojeni s Mojang Studios.</p>
+          <p className="mt-1">Nejsme spojeni s Mojang Studios ani Microsoft.</p>
         </div>
         <div className="text-right">
           <p>

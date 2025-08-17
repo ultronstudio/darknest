@@ -23,7 +23,7 @@ const minigamesData: Minigame[] = [
 ];
 
 const MinigameCard: React.FC<{ minigame: Minigame; delay: string }> = ({ minigame, delay }) => (
-  <div className="group transition-all duration-300 transform bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-[#6633cc] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#6633cc]/20 scroll-animate" style={{ transitionDelay: delay }}>
+  <div className="group transition-all duration-200 transform bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-[#6633cc] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#6633cc]/20" style={{ transitionDelay: delay }}>
     <h3 className="text-xl font-bold text-white mb-2">{minigame.title}</h3>
     <p className="text-gray-400">{minigame.description}</p>
   </div>
@@ -34,7 +34,7 @@ const Minigames: React.FC = () => {
   return (
     <section id="minihry" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12 scroll-animate">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white">Naše <span className="text-[#6633cc]">minihry</span></h2>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">Ponoř se do našich unikátních herních módů, které jsou plné zábavy a výzev.</p>
         </div>
