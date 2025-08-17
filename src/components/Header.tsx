@@ -7,10 +7,8 @@ import { usePathname } from 'next/navigation'; // 1. Import hooku
 const Header: React.FC = () => {
   const navLinks = [
     { href: '/minihry', text: 'Minihry' },
-    { href: '#o-nas', text: 'O nás' },
     { href: '/tym', text: 'Tým' },
-    { href: '/hlasovani', text: 'Hlasování' },
-    { href: '#pripojit-se', text: 'Připojit se' },
+    { href: '/hlasovani', text: 'Hlasování' }
   ];
 
   const pathname = usePathname(); // 2. Získání aktuální cesty
