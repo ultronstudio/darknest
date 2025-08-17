@@ -160,6 +160,10 @@ const teamSections: TeamSection[] = [
             {
                 name: "Proste_Travex",
                 role: "YouTuber",
+            },
+            {
+              name: "Darqes",
+              role: "Propagátor"
             }
         ],
       }
