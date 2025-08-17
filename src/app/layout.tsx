@@ -45,11 +45,7 @@ export const metadata: Metadata = {
     siteName: 'DarkNest',
     locale: 'cs_CZ',
     type: 'website',
-  },
-
-  // Další užitečné tagy
-  themeColor: '#6633cc', // Barva pro UI prohlížeče na mobilních zařízeních
-  colorScheme: 'dark'
+  }
 };
 
 export default function RootLayout({
@@ -66,6 +62,7 @@ export default function RootLayout({
         {/* Favicony a další ikony můžete přidat sem nebo do metadata objektu */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" />
       </head>
       <body className="antialiased">
         <div className="bg-gray-900 text-gray-300 relative overflow-hidden">

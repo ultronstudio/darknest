@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     { href: '/minihry', text: 'Minihry' },
     { href: '#o-nas', text: 'O nás' },
     { href: '/tym', text: 'Tým' },
-    { href: '#hlasovani', text: 'Hlasování' },
+    { href: '/hlasovani', text: 'Hlasování' },
     { href: '#pripojit-se', text: 'Připojit se' },
   ];
 
