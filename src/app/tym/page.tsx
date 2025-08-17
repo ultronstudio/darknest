@@ -17,8 +17,8 @@ type TeamSection = {
 
 // 2. Mapování rolí na barvy a emoji pro dynamické stylování
 const roleStyles: { [key: string]: { color: string; emoji?: string } } = {
-  "Majitel": { color: "#ff0000" },
-  "Spolumajitel": { color: "#ff0004" },
+  "Majitel": { color: "#ff0000", emoji: "🔰" },
+  "Spolumajitel": { color: "#ff0004", emoji: "🛡️" },
   "Hlavní Developer": { color: "#6633cc", emoji: "💻" },
   "Hlavní Technik": { color: "#9933ff", emoji: "🛠️" },
   "Hlavní Helper": { color: "#0762f4", emoji: "📋" },
