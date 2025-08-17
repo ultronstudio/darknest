@@ -8,7 +8,8 @@ const Header: React.FC = () => {
   const navLinks = [
     { href: '/minihry', text: 'Minihry' },
     { href: '/tym', text: 'Tým' },
-    { href: '/hlasovani', text: 'Hlasování' }
+    { href: '/hlasovani', text: 'Hlasování' },
+    { href: '/vip', text: 'VIP' },
   ];
 
   const pathname = usePathname(); // 2. Získání aktuální cesty
