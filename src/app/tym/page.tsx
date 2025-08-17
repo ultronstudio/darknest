@@ -146,6 +146,16 @@ const teamSections: TeamSection[] = [
         ],
       },
       {
+        title: "Propagátor Tým",
+        description: "Členové, kteří pomáhají šířit povědomí o našem serveru.",
+        members: [
+          {
+            name: "Darqes",
+            role: "Propagátor"
+          }
+        ],
+      },
+      {
         title: "Kreativní Tým",
         description: "Tvůrci, kteří obohacují server a komunitu svým obsahem a designem.",
         members: [
@@ -161,10 +171,6 @@ const teamSections: TeamSection[] = [
                 name: "Proste_Travex",
                 role: "YouTuber",
             },
-            {
-              name: "Darqes",
-              role: "Propagátor"
-            }
         ],
       }
 ];
