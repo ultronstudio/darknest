@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 // Rozšířená metadata pro SEO a sociální sítě
 export const metadata: Metadata = {
   // Základní metadata
-  title: "DarkNest - Váš Minecraft Server", // Lepší titulek pro SEO
+  title: "DarkNest", // Lepší titulek pro SEO
   description: "Připojte se na DarkNest, unikátní Minecraft server s přátelskou komunitou a spoustou zábavy.",
   
   // Autor a vlastnictví

@@ -28,9 +28,9 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/70 backdrop-blur-lg border-b border-gray-800 animate-slide-down">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="/" className="text-2xl font-bold text-white">
+        <Link href="/" className="text-2xl font-bold text-white">
           Dark<span className="text-[#6633cc]">Nest</span>
-        </a>
+        </Link>
         <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <Link
