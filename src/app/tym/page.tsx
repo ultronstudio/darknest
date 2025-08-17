@@ -15,12 +15,33 @@ type TeamSection = {
   members: TeamMember[];
 };
 
+// 2. Mapování rolí na barvy a emoji pro dynamické stylování
+const roleStyles: { [key: string]: { color: string; emoji?: string } } = {
+  "Majitel": { color: "#ff0000" },
+  "Spolumajitel": { color: "#ff0004" },
+  "Hlavní Developer": { color: "#6633cc", emoji: "💻" },
+  "Hlavní Technik": { color: "#9933ff", emoji: "🛠️" },
+  "Hlavní Helper": { color: "#0762f4", emoji: "📋" },
+  "Hlavní Builder": { color: "#1ad205", emoji: "🧰" },
+  "Tvůrce": { color: "#ed0769", emoji: "🎥" },
+  "Designer": { color: "#f29304", emoji: "🎨" },
+  "Zkušební Developer": { color: "#ccccff", emoji: "💻" },
+  "Zkušební Helper": { color: "#4597d7", emoji: "🔵" },
+  "Zaučenec": { color: "#71bcf5", emoji: "🔵" },
+  "Propagátor": { color: "#532c2c", emoji: "🌹" },
+  "YouTuber": { color: "#9a3232", emoji: "📹" },
+};
+
+
 // Komponenta pro zobrazení karty člena týmu s fallbackem pro obrázek
 const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }) => {
   const initialSrc = `https://vzge.me/bust/${member.name}.png?no=cape`;
   const fallbackSrc = `https://vzge.me/bust/UnknownAbi.png?no=cape`;
-  
+
   const [imgSrc, setImgSrc] = useState(initialSrc);
+  
+  // Rozdělí role, pokud má člen více rolí (např. "Hlavní Technik a Hlavní Builder")
+  const roles = member.role.split(" a ");
 
   return (
     <div
@@ -33,7 +54,7 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }
       <div className="relative mb-4">
         <Image
           src={imgSrc}
-          onError={() => setImgSrc(fallbackSrc)} // Při chybě se nastaví záložní obrázek
+          onError={() => setImgSrc(fallbackSrc)}
           alt={`Avatar of ${member.name}`}
           width={128}
           height={128}
@@ -42,16 +63,31 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }
                      group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(102,51,204,0.7)]"
         />
       </div>
-      <h2 className="text-2xl font-bold text-white">{member.name}</h2>
-      <p className="text-[#6633cc] font-semibold mb-3">
-        {member.role}
-      </p>
+      <h2 className="text-2xl font-bold text-white mb-2">{member.name}</h2>
+      
+      {/* Dynamické zobrazení rolí pod sebou */}
+      <div className="font-semibold flex flex-col items-center justify-center gap-1">
+        {roles.map((role) => {
+          const trimmedRole = role.trim();
+          const style = roleStyles[trimmedRole];
+          
+          if (!style) {
+            return <div key={trimmedRole}>{trimmedRole}</div>;
+          }
+
+          return (
+            <div key={trimmedRole} style={{ color: style.color }}>
+              {style.emoji && `${style.emoji} `}{trimmedRole}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
 
 
-// 2. Strukturovaná data týmů
+// 3. Strukturovaná data týmů
 const teamSections: TeamSection[] = [
     {
         title: "Vedení Serveru",
