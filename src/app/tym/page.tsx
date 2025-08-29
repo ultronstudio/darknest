@@ -112,7 +112,7 @@ const teamSections: TeamSection[] = [
                 role: "Hlavní Technik a Hlavní Builder",
             },
             {
-                name: "Flumfy",
+                name: "Ultronek123",
                 role: "Hlavní Developer",
             },
             {
@@ -121,6 +121,7 @@ const teamSections: TeamSection[] = [
             },
         ]
       },
+    /*
       {
         title: "Developer Tým",
         description: "Techničtí mágové, kteří programují nové funkce a opravují chyby.",
@@ -131,17 +132,18 @@ const teamSections: TeamSection[] = [
           },
         ],
       },
+      */
       {
         title: "Helper Tým",
         description: "Přátelská podpora pro všechny hráče přímo ve hře i na Discordu.",
         members: [
           {
             name: "Kubintak",
-            role: "Zkušební Helper",
+            role: "Helper",
           },
           {
             name: "zonyp",
-            role: "Zaučenec",
+            role: "Zkušební Helper",
           },
         ],
       },
@@ -171,6 +173,10 @@ const teamSections: TeamSection[] = [
                 name: "Proste_Travex",
                 role: "YouTuber",
             },
+            {
+              name: "AdaVoj12",
+              role: "YouTuber",
+            }
         ],
       }
 ];
