@@ -23,10 +23,13 @@ const roleStyles: { [key: string]: { color: string; emoji?: string } } = {
   "Hlavní Technik": { color: "#9933ff", emoji: "🛠️" },
   "Hlavní Helper": { color: "#0762f4", emoji: "📋" },
   "Hlavní Builder": { color: "#1ad205", emoji: "🧰" },
+  "Hlavní Tvůrce": { color: "#f207fa", emoji: "🧰" },
+  "Hlavní Designer": { color: "#ff9a03", emoji: "🧰" },
   "Tvůrce": { color: "#ed0769", emoji: "🎥" },
   "Designer": { color: "#f29304", emoji: "🎨" },
   "Zkušební Developer": { color: "#ccccff", emoji: "💻" },
   "Zkušební Helper": { color: "#4597d7", emoji: "🔵" },
+  "Helper": { color: "#0762f4", emoji: "🔵" },
   "Zaučenec": { color: "#71bcf5", emoji: "🔵" },
   "Propagátor": { color: "#532c2c", emoji: "🌹" },
   "YouTuber": { color: "#9a3232", emoji: "📹" },
@@ -77,7 +80,8 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }
 
           return (
             <div key={trimmedRole} style={{ color: style.color }}>
-              {style.emoji && `${style.emoji} `}{trimmedRole}
+              {/* {style.emoji && `${style.emoji} `} */}
+              {trimmedRole}
             </div>
           );
         })}
@@ -104,7 +108,7 @@ const teamSections: TeamSection[] = [
         ],
       },
       {
-        title: "Vedení Týmu",
+        title: "Vedení Týmů",
         description: "Zkušení členové, kteří vedou jednotlivé týmy a jejich členy.",
         members: [
             {
@@ -119,6 +123,14 @@ const teamSections: TeamSection[] = [
                 name: "Matescz5152",
                 role: "Hlavní Helper",
             },
+            {
+              name: "Albixel",
+              role: "Hlavní Tvůrce"
+            },
+            {
+              name: "BATU_cz",
+              role: "Hlavní Designer"
+            }
         ]
       },
     /*
@@ -161,14 +173,6 @@ const teamSections: TeamSection[] = [
         title: "Kreativní Tým",
         description: "Tvůrci, kteří obohacují server a komunitu svým obsahem a designem.",
         members: [
-            {
-                name: "Albixel",
-                role: "Tvůrce",
-            },
-            {
-                name: "BATU_cz",
-                role: "Designer",
-            },
             {
                 name: "Proste_Travex",
                 role: "YouTuber",
