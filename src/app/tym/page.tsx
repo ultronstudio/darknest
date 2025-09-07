@@ -19,6 +19,7 @@ type TeamSection = {
 const roleStyles: { [key: string]: { color: string; emoji?: string } } = {
   "Majitel": { color: "#ff0000", emoji: "🔰" },
   "Spolumajitel": { color: "#ff0004", emoji: "🛡️" },
+  "Admin": { color: "#ff9900", emoji: "⚙️" },
   "Hlavní Developer": { color: "#6633cc", emoji: "💻" },
   "Hlavní Technik": { color: "#9933ff", emoji: "🛠️" },
   "Hlavní Helper": { color: "#0762f4", emoji: "📋" },
@@ -104,6 +105,10 @@ const teamSections: TeamSection[] = [
           {
             name: "Flumfy",
             role: "Spolumajitel"
+          },
+          {
+            name: "RostyCZ",
+            role: "Admin"
           }
         ],
       },
@@ -113,15 +118,11 @@ const teamSections: TeamSection[] = [
         members: [
             {
                 name: "Itzz_April",
-                role: "Hlavní Technik a Hlavní Builder",
+                role: "Hlavní Technik a Hlavní Builder a Hlavní Helper",
             },
             {
                 name: "Ultronek123",
                 role: "Hlavní Developer",
-            },
-            {
-                name: "Matescz5152",
-                role: "Hlavní Helper",
             },
             {
               name: "Albixel",
